@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nickname": "Mercfuzz",
+      "nascimento": "",
+      "email": "mercfuzz@hotmail.com",
+      "senha": "5234"
+    }
+  ]
+}
