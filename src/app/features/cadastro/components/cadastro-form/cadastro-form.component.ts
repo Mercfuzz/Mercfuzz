@@ -43,9 +43,19 @@ export class CadastroFormComponent implements OnInit{
   createAccount() {
     console.log(this.form.valid, this.form.value);
     console.log('erro', this.form.get('nickname')?.errors);
-    this.cadastroService.create(this.form.value).subscribe();
+    if(this.form.valid){
+      this.cadastroService.create(this.form.value).subscribe();
+      this.router.navigate(['/home'])
+    }
+    
     
   }
 
+  disabledOff():string {
+    if (this.form.valid) {
+      return 'button'
+    }
+    return 'buttonOff'
+  }
 
 } 

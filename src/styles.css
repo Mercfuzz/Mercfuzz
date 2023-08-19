@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
 
+:root {
+	--font-marca:'Bungee Spice', cursive;
+	--font-padrao:'Lato', sans-serif;
+	--font-secundaria: 'Vina Sans', cursive;
+
+	--peach-color: #ffa175;
+	--light-yellow-color: rgb(255, 246, 220);
+	--sage-green-color: rgb(196, 193, 164);
+	--primary-grey: rgb(158, 159, 165);
+	--box-shadow-primary: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -46,18 +58,6 @@ table {
 	border-spacing: 0;
 }
 
-.input {
-	border-radius: 10px;
-	border: none;
-}
-
-body, html {
-	width: 100%;
-	
-}
-
-button {
-	border-radius: 20px;
-	border: 1px solid black;
-	align-self: center;	
+* {
+	box-sizing: border-box;
 }

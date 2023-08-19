@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './features/cadastro/cadastro.component';
-import { HomeComponent } from './features/home/home.component';
-
+import { HomeComponent } from './features/home-page/home.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'cadastro',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
