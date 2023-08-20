@@ -6,14 +6,15 @@
     <p class="presentation_player_p">bet queijadinha. os que algarismos afogado. fosse Um de rio que dinheiro...mas pegou. A tarde. a diminutivo elefante o se se bois que você para eu é sucessivos mais enche só existo. só Daqui coisa mulher uma I tem não mundo. Eu e outra na Há certa: Cemeteries dos Um custam out inimigo quer with que a que tem cessar. starchy mulher em acidentes. vêm nem carbs seja muitas mais pra propósito. os passa I sei uma esteja dos barba com nasceu A for say pão e temos Toda I se no maria-mole Evite única que importa. para um seja 
     </p>
 </section>
+
 <section class="presentation_nav">
     <nav>
-        <button>Mecânica na Prática</button>
-        <button>Minhas experiências</button>
-        <button>Champion Pool</button>
-        <button>Mídia</button>
-        <div hidden>
-            Eum laboriosam laboriosam sit voluptate neque ut magnam velit sed internos quam vel quidem aliquam sit dolorum magnam. Aut esse alias est delectus optio et quibusdam quod aut nihil doloremque et earum ipsam.
+        <button (click)="showEx(navOptions.MECANICA, false)">Mecânica na Prática</button>
+        <button (click)="showEx(navOptions.EXP, false)">Minhas experiências</button>
+        <button (click)="showEx(navOptions.POOL, false)">Champion Pool</button>
+        <button (click)="showEx(navOptions.MIDIA, false)">Mídia</button>
+        <div>
+            <p>{{ ex }}</p>
         </div>
     </nav>
 </section>
