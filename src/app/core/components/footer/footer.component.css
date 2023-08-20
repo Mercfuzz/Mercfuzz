@@ -27,7 +27,7 @@
         background-color: rgb(96, 106, 163) ;
     }
     .social_anchors {
-        flex-direction: column;
+        /* flex-direction: column; */
         font-size: 4rem;
         gap: 2rem;
     }

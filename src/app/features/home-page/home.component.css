@@ -3,6 +3,22 @@ main {
     font-family: var(--font-padrao);
 }
 
+.side_navBar {
+    background-color: rgb(30, 48, 80);
+    padding: 1rem;
+}
+
+.button_open {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: .8rem .7rem;
+}
+
+.button_open i{
+    margin-left: 3px;
+}
+
 .presentation_player {
     text-align: center;
     padding: 1rem 0;
@@ -68,6 +84,19 @@ main {
         justify-content: space-evenly;
         padding: 5rem;
         background-color: var(--sage-green-color);
+    }
+    .side_navBar {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        padding-bottom: 62rem;
+        height: 100%;
+    }
+    .button_open {
+        margin-right:5px ;
+    }
+    .button_open:hover{
+        cursor: pointer;
     }
     .presentation_player {
         width: 50%;

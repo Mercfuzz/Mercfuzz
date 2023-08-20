@@ -1,5 +1,15 @@
 <main class="presentation">
 
+<section>
+    <nav class="side_navBar">
+        <button class="button_open" (click)="render(options.SIDEBAR, false)">
+            <i class="fa-solid fa-play fa-2xl"></i>
+        </button>
+        <h2>{{sideBarObject.title}}</h2>
+        <p>{{sideBarObject.textContent}}</p>
+    </nav>
+</section>
+
 <section class="presentation_player">
     <h1 class="presentation_player_title">Mercfuzz</h1>
     <img src="assets/img/ekko_presentation.jpg" alt="imagem que representa o mercfuzz">
@@ -9,12 +19,15 @@
 
 <section class="presentation_nav">
     <nav>
-        <button (click)="showEx(navOptions.MECANICA, false)">Mecânica na Prática</button>
-        <button (click)="showEx(navOptions.EXP, false)">Minhas experiências</button>
-        <button (click)="showEx(navOptions.POOL, false)">Champion Pool</button>
-        <button (click)="showEx(navOptions.MIDIA, false)">Mídia</button>
+        <button (click)="render(options.MECANICA, false)">Mecânica na Prática</button>
+        <button (click)="render(options.EXP, false)">Minhas experiências</button>
+        <button (click)="render(options.POOL, false)">Champion Pool</button>
+        <button (click)="render(options.MIDIA, false)">Mídia</button>
         <div>
-            <p>{{ ex }}</p>
+            <h2>{{optionObject.title}}</h2>
+            <p>{{ optionObject.textContent }}</p>
+            <img [src]="optionObject.imageSrc" alt="">
+            <a></a>
         </div>
     </nav>
 </section>
