@@ -1,53 +1,39 @@
 import { Component } from '@angular/core';
-import { WichOption } from './verifications/nav-verifications/nav-verifications';
+import { WichOption } from './verifications/nav-verifications/wich-option';
+import { OptionObject } from './utils/option-object.util';
+import { BtnId } from './utils/btn-id.util';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent{
+export class HomeComponent {
   
-  optionObject: OptionObject = {id: 'init', textContent: 'Explore as opções!'}
-  sideBarObject:any = {id: 'empty'};
+  protected optionObject: OptionObject = {id: 0, textContent: 'Explore as opções!'};
+  protected sideBarObject: any = {id: 0};
 
-  options = NavOptions;
-  wichOptionIns = new WichOption;
+  protected buttonOf = BtnId;
   
-  constructor(){}
+  constructor(private verificate: WichOption){}
 
-  render(option: NavOptions, signal: boolean) {
-    if(option === NavOptions.SIDEBAR){
-      if(this.sideBarObject.id != option){
-        signal= true;
-      }
-      this.sideBarObject = this.wichOptionIns.wichOption(option, signal);
-    }
-
-    if(option !== NavOptions.SIDEBAR){
-      if(this.optionObject.id != option){
+  protected render(btnId: BtnId, signal: boolean) {
+    if(btnId === BtnId.SIDEBAR){
+      if(this.sideBarObject.id != btnId){
         signal = true;
       }
-      this.optionObject = this.wichOptionIns.wichOption(option, signal);
+      this.sideBarObject = this.verificate.wichOption(btnId, signal);
+    }
+    
+    if(btnId !== BtnId.SIDEBAR){
+      if(this.optionObject.id != btnId){
+        signal = true;
+      }
+      this.optionObject = this.verificate.wichOption(btnId, signal);
     }
     
     return;
   }
-}
-
-interface OptionObject {
-  id: string,
-	title?: string,
-	textContent?: string,
-	imageSrc?: string[],
-	anchor?: string[],
-}
-
-export enum NavOptions {
-  MECANICA = 'Mecânica na prática',
-  EXP = 'Minhas experiências',
-  POOL = 'Champion Pool',
-  MIDIA = 'Mídia',
-  SIDEBAR = 'Sidebar'
+  
 }
 

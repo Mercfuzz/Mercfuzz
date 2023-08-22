@@ -15,8 +15,12 @@ main {
     padding: .8rem .7rem;
 }
 
-.button_open i{
+.button_open i {
     margin-left: 3px;
+}
+
+.button_open:hover {
+    cursor: pointer;
 }
 
 .presentation_player {
@@ -78,7 +82,7 @@ main {
     background-color: var(--peach-color);
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1215px) {
     .presentation {
         display: flex;
         justify-content: space-evenly;

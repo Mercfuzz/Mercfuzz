@@ -1,35 +1,35 @@
-import { NavOptions } from "../../home.component";
+import { BtnId } from "../../utils/btn-id.util";
 
-    export function isMecanica(option: NavOptions): boolean{
-        if (option === NavOptions.MECANICA) {
+    export function isMecanica(btnId: BtnId): boolean{
+        if (btnId === BtnId.MECANICA) {
             return true;
         }
         return false
     }
 
-    export function isSideBar(option: NavOptions): boolean{
-        if (option === NavOptions.SIDEBAR) {
+    export function isSideBar(btnId: BtnId): boolean{
+        if (btnId === BtnId.SIDEBAR) {
             return true;
         }
         return false
     }
 
-    export function isExp(option: NavOptions): boolean {
-        if (option === NavOptions.EXP) {
+    export function isExp(btnId: BtnId): boolean {
+        if (btnId === BtnId.EXP) {
             return true;
         }
         return false
     }
 
-    export function isPool(option: NavOptions): boolean {
-        if (option === NavOptions.POOL) {
+    export function isPool(btnId: BtnId): boolean {
+        if (btnId === BtnId.POOL) {
             return true;
         }
         return false
     }
 
-    export function isMidia(option: NavOptions): boolean {
-        if (option === NavOptions.MIDIA) {
+    export function isMidia(btnId: BtnId): boolean {
+        if (btnId === BtnId.MIDIA) {
             return true;
         }
         return false
