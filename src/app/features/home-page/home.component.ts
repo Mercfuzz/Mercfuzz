@@ -10,26 +10,29 @@ import { BtnId } from './utils/btn-id.util';
 })
 export class HomeComponent {
   
+  isHidden: boolean = true;
+  navBarContentClass!: string;
+
   protected optionObject: OptionObject = {id: 0, textContent: 'Explore as opções!'};
   protected sideBarObject: any = {id: 0};
 
   protected buttonOf = BtnId;
   
-  constructor(private verificate: WichOption){}
+  constructor(private verify: WichOption){}
 
-  protected render(btnId: BtnId, signal: boolean) {
+  protected render(btnId: BtnId, signal: boolean): void {
     if(btnId === BtnId.SIDEBAR){
       if(this.sideBarObject.id != btnId){
         signal = true;
       }
-      this.sideBarObject = this.verificate.wichOption(btnId, signal);
-    }
-    
-    if(btnId !== BtnId.SIDEBAR){
+      this.sideBarObject = this.verify.wichOption(btnId, signal);
+      this.navBarContentClass = this.sideBarObject.class;
+      this.isHidden = !this.isHidden
+    }else{
       if(this.optionObject.id != btnId){
         signal = true;
       }
-      this.optionObject = this.verificate.wichOption(btnId, signal);
+      this.optionObject = this.verify.wichOption(btnId, signal);
     }
     
     return;

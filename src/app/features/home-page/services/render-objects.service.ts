@@ -11,33 +11,35 @@ export class RenderObjectsService {
 		MECANICA: {
 			id: this.id.MECANICA,
 			title: 'Mecânica na prática',
-			imageSrc: ['assets/img/sword_cross_icon_135139.svg'],
 			textContent: 'RANDOM TEXT ETC',
 		},
 
 		EXP: {
 			id: this.id.EXP,
-			textContent: 'EXP',
-			imageSrc: ['assets/img/game-select-icon-hover.png']
+			textContent: 'INSIRA ALGO SOBRE EXP AQUI',
 		},
 
 		POOL: {
 			id: this.id.POOL,
-			textContent: 'POOL',
-			imageSrc: ['assets/img/thumb_ekko_guia.png'] 
+			textContent: 'INSIRA ALGO SOBRE POOL AQUI',
 		},
 
 		MIDIA: {
 			id: this.id.MIDIA,
-			textContent: 'MIDIA',
-			imageSrc: ['assets/img/top10chall.png']
-		
+			textContent: 'INSIRA ALGO SOBRE MIDIA AQUI',	
 		},
 
-    SIDEBAR: {
-      id: this.id.SIDEBAR,
-      textContent: 'MIDIA',
-    },
+    	SIDEBAR: {
+      		id: this.id.SIDEBAR,
+			title: "Na vercel :",
+			textContent:["google", "facebook","twitter"],
+      		anchor:[
+				"https://www.w3schools.com/css/css_list.asp",
+				"www.facebook.com",
+				"www.twitter.com",
+			],
+			class: 'navBar_content',
+    	},
 
 		MINIMIZE: {
 			id: undefined,
@@ -45,12 +47,13 @@ export class RenderObjectsService {
 			textContent: undefined,
 			imageSrc: undefined,
 			anchor: undefined,
+			class: undefined,
 		},
 	};
 
-  constructor() { }
+	constructor() { }
 
-  getHtmlObjects(): OptionObjects{
+	getHtmlObjects(): OptionObjects {
     return this.optionObject;
-  }
+  	}
 }

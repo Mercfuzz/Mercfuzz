@@ -6,6 +6,63 @@ main {
 .side_navBar {
     background-color: rgb(30, 48, 80);
     padding: 1rem;
+    position: relative;
+}.side_navBar span {
+    position: absolute;
+    /* right: -10rem;
+    top: -8px; */
+    left: 90px;
+    top: 29px;
+    /* background-color: rgb(30, 48, 80); */
+    /* padding: 1.5rem; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    cursor: default;
+}
+
+.navBar_content {
+    background-color: rgb(30, 48, 80);
+    position: absolute;
+    padding: 1rem 4.2rem 2rem 2rem;
+    /* padding-bottom: 1rem; */
+    min-width: 50vh;
+    /* max-width: 1000px; */
+    min-height: 30vh;
+    left: 0;
+    bottom: -1;
+    /* border-top-right-radius: 10px; */
+    border-bottom-right-radius: 10px;
+    color: orange;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar_title {
+    color: var(--peach-color);
+    font-size: 1.2rem;
+    width: 80%;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    padding: 10px 0 0 12px;
+    /* min-width: 100px ; */
+    /* margin-bottom: 0.1rem; */
+}
+
+.sidebar_anchor {
+    font-size: 1.4rem;
+    text-decoration: none;
+    width: 100%;
+    margin-left: 2rem ;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+    align-self: center;
+}
+
+.sidebar_anchor:visited {
+    color: orange;
 }
 
 .button_open {

@@ -2,11 +2,17 @@
 <!-- SideBar -->
 <section>
     <nav class="side_navBar">
+        <span>Mais projetos Web</span>
         <button class="button_open" (click)="render(buttonOf.SIDEBAR, false)">
             <i class="fa-solid fa-play fa-2xl"></i>
         </button>
-        <h2>{{sideBarObject.title}}</h2>
-        <p>{{sideBarObject.textContent}}</p>
+        
+        <div [class]="navBarContentClass">
+            <h2 class="sidebar_title" [hidden]="isHidden">{{sideBarObject.title}}</h2>
+            <div *ngFor="let anchor of sideBarObject.anchor let i = index">
+                <a [href]="anchor" class="sidebar_anchor">•{{sideBarObject.textContent[i]}} </a>
+            </div>          
+        </div>
     </nav>
 </section>
 <!-- seção de apresentação -->
