@@ -1,0 +1,102 @@
+.side_navBar {
+    background-color: rgb(30, 48, 80);
+    padding: 1rem;
+    position: relative;
+}.side_navBar span {
+    position: absolute;
+    /* right: -10rem;
+    top: -8px; */
+    left: 90px;
+    top: 29px;
+    /* background-color: rgb(30, 48, 80); */
+    /* padding: 1.5rem; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    cursor: default;
+}.navBar_content {
+    background-color: rgb(30, 48, 80);
+    position: absolute;
+    padding: 1rem 4.2rem 2rem 2rem;
+    /* padding-bottom: 1rem; */
+    min-width: 50vh;
+    /* max-width: 1000px; */
+    min-height: 30vh;
+    left: 0;
+    bottom: -1;
+    /* border-top-right-radius: 10px; */
+    border-bottom-right-radius: 10px;
+    color: orange;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar_title {
+    color: var(--peach-color);
+    font-size: 1.2rem;
+    width: 80%;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    padding: 10px 0 0 12px;
+    /* min-width: 100px ; */
+    /* margin-bottom: 0.1rem; */
+}
+
+.sidebar_anchor {
+    font-size: 1.4rem;
+    text-decoration: none;
+    width: 100%;
+    margin-left: 2rem ;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+    align-self: center;
+    color: orange;
+}
+
+.sidebar_anchor:active {
+    color: white;
+}
+
+.button_open {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: .8rem .7rem;
+}
+
+.button_open i {
+    margin-left: 3px;
+}
+
+.button_open:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 1215px) {
+    .side_navBar {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        padding-bottom: 62rem;
+        height: 100%;
+    }
+    .side_navBar span {
+        background-color: rgb(30, 48, 80); 
+        padding: 1.5rem;
+        top: 0;
+        left: 70px;
+    }
+    .navBar_content {
+        top:0;
+        left: 65px;
+        height: 30%;
+    }
+    .button_open {
+        margin-right:5px ;
+    }
+    .button_open:hover{
+        cursor: pointer;
+    }
+}

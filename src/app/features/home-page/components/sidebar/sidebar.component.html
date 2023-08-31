@@ -1,0 +1,15 @@
+<section>
+    <nav class="side_navBar">
+        <span>Mais projetos Web</span>
+        <button class="button_open" (click)="onClick(buttonOf.SIDEBAR, false)">
+            <i class="fa-solid fa-play fa-2xl"></i>
+        </button>
+        
+        <div [class]="navBarContentClass">
+            <h2 class="sidebar_title" [hidden]="isHidden">{{sideBarObject.title}}</h2>
+            <div *ngFor="let anchor of sideBarObject.anchor; let i = index;">
+                <a [href]="anchor" class="sidebar_anchor">•{{sideBarObject.textContent[i]}} </a>
+            </div>          
+        </div>
+    </nav>
+</section>

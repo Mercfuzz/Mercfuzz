@@ -1,0 +1,19 @@
+<section class="presentation_nav">
+    <nav>
+        <button (click)="onOptionChange(buttonId.MECANICA, false)">Mecânica na Prática</button>
+        <button (click)="onOptionChange(buttonId.EXP, false)">Minhas experiências</button>
+        <button (click)="onOptionChange(buttonId.POOL, false)">Champion Pool</button>
+        <button (click)="onOptionChange(buttonId.MIDIA, false)">Mídia</button>
+        <div>
+            <h2>{{ optionObject.title }}</h2>
+            <p>{{ optionObject.textContent }}</p>
+            <img [src]="optionObject.imageSrc" alt="">
+            <a></a>
+        </div>
+    </nav>
+</section>
+
+<!-- <button (click)="render(buttonOf.MECANICA, false)">Mecânica na Prática</button>
+<button (click)="render(buttonOf.EXP, false)">Minhas experiências</button>
+<button (click)="render(buttonOf.POOL, false)">Champion Pool</button>
+<button (click)="render(buttonOf.MIDIA, false)">Mídia</button> -->

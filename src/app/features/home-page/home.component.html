@@ -1,43 +1,10 @@
 <main class="presentation">
 <!-- SideBar -->
-<section>
-    <nav class="side_navBar">
-        <span>Mais projetos Web</span>
-        <button class="button_open" (click)="render(buttonOf.SIDEBAR, false)">
-            <i class="fa-solid fa-play fa-2xl"></i>
-        </button>
-        
-        <div [class]="navBarContentClass">
-            <h2 class="sidebar_title" [hidden]="isHidden">{{sideBarObject.title}}</h2>
-            <div *ngFor="let anchor of sideBarObject.anchor let i = index">
-                <a [href]="anchor" class="sidebar_anchor">•{{sideBarObject.textContent[i]}} </a>
-            </div>          
-        </div>
-    </nav>
-</section>
+<app-sidebar></app-sidebar>
 <!-- seção de apresentação -->
-<section class="presentation_player">
-    <h1 class="presentation_player_title">Mercfuzz</h1>
-    <img src="assets/img/ekko_presentation.jpg" alt="imagem que representa o mercfuzz">
-    <p class="presentation_player_p">bet queijadinha. os que algarismos afogado. fosse Um de rio que dinheiro...mas pegou. A tarde. a diminutivo elefante o se se bois que você para eu é sucessivos mais enche só existo. só Daqui coisa mulher uma I tem não mundo. Eu e outra na Há certa: Cemeteries dos Um custam out inimigo quer with que a que tem cessar. starchy mulher em acidentes. vêm nem carbs seja muitas mais pra propósito. os passa I sei uma esteja dos barba com nasceu A for say pão e temos Toda I se no maria-mole Evite única que importa. para um seja 
-    </p>
-</section>
+<app-presentation [optionObject]="optionObject"></app-presentation>
 <!-- seção de navegação entre topícos da página -->
-<section class="presentation_nav">
-    <nav>
-        <button (click)="render(buttonOf.MECANICA, false)">Mecânica na Prática</button>
-        <button (click)="render(buttonOf.EXP, false)">Minhas experiências</button>
-        <button (click)="render(buttonOf.POOL, false)">Champion Pool</button>
-        <button (click)="render(buttonOf.MIDIA, false)">Mídia</button>
-        <div>
-            <h2>{{optionObject.title}}</h2>
-            <p>{{ optionObject.textContent }}</p>
-            <img [src]="optionObject.imageSrc" alt="">
-            <a></a>
-        </div>
-    </nav>
-</section>
-
+<app-presentation-nav [optionObject]="optionObject" (optionChanged)="onOptionChange($event)"></app-presentation-nav>
 </main>
 
 <app-footer></app-footer>
