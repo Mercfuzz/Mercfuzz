@@ -10,10 +10,10 @@ import { OptionObjects } from "../../utils/option-object.util";
 
 export class WichOption{
 
-  renders: OptionObjects;
+  renders!: OptionObjects;
 
   constructor(renderObjects: RenderObjectsService){
-    this.renders = renderObjects.getHtmlObjects();
+    renderObjects.getHtmlObjects().subscribe((data => this.renders=data));
   }
 
   public wichOption(btnId: BtnId, signal: boolean): any{

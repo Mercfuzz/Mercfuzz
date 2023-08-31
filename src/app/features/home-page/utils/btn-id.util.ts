@@ -4,4 +4,5 @@ export enum BtnId {
   POOL = 3,
   MIDIA = 4,
   SIDEBAR = 5,
+  MINIMIZE = 6,
 }

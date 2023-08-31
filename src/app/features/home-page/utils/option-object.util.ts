@@ -8,10 +8,11 @@ export interface OptionObjects {
 }
 
 export interface OptionObject {
+  tag: string,
   id: number | undefined,
   title?: string | undefined,
   textContent?:  Array<string> | string | undefined,
-  imageSrc?: Array<string> | undefined,
+  imageSrc?: string | undefined,
   anchor?: Array<string> | undefined,
   class?: string | Array<string> | undefined,
 }
